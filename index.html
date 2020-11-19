@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div>
+            <img src="logo.jpg" alt="Logo" align="left">
+            <span>
+                    <button class="btn"><i class="fa fa-download"></i>Download</button>
+            </span>
+        </div>
+        <div><h2>Upload Files</h2></div>
+    </div>
+    <div class="menupane">
+        <div class="upload">
+
+            <form id="myForm" method="post" enctype="multipart/form-data">
+                <div id="fileSelectorDiv">
+                    <span id="filesSpan">
+                        <input type="file" id="files" required name="files" class="hidden"
+                               accept="image/x-png,image/gif,image/jpeg,application/pdf" multiple style="font-size:15px"/>
+                    <label for="files">Select Files</label>
+
+                    </span>
+                    <div id="fileCount"></div>
+                </div>
+            </form>
+        </div>
+        <div class="filelist">
+            <div id="selectedFiles"></div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <button id="reset" type="button">Reset</button>
+        <button id="ok" type="button">Submit</button>
+<!--        <i class="fa fa-spinner fa-spin"></i>Processing-->
+    </div>
+</div>
+</body>
+</html>
