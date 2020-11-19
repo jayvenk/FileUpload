@@ -116,16 +116,11 @@
 }
 
 #fileCount {
-  text-align: right;
+  text-align: center;
 }
 
 .hidden {
-  visibility: hidden;
-}
-
-#filesSpan label {
-  position: absolute;
-  left: 100px;
+  display: none;
 }
 
 #reset{
