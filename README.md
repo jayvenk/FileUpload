@@ -9,7 +9,7 @@ git clone https://github.com/jayvenk/FileUpload.git
 
 2. cd into the project folder
 ```
-cd fileUpload
+cd FileUpload
 ```
 
 3. Install the dependencies
@@ -22,4 +22,28 @@ npm install
 npm start
 ```
 
-Go to your browser and paste http://192.168.86.26:8081/ to view the project.
+Go to your browser and paste http://127.0.0.1:8081/ to view the project.
+
+## Debug
+
+If you get `Permission denied` error when you run `npm start`
+1. Delete the node_modules
+```
+rm -rf node_modules
+```
+2. Delete the package.json lock file
+```
+rm package-lock.json
+```
+3. Clear npm cache
+```
+npm cache clean --force
+```
+4. Install the dependencies
+```
+npm install
+```
+5. Now start the server
+```
+npm start
+```
