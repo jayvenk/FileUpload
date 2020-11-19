@@ -1,0 +1,15 @@
+{
+  "name": "file_upload",
+  "version": "1.0.0",
+  "description": "MetricStream FileUpload",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 8081",
+    "test": "test"
+  },
+  "author": "Jayanthe Venkataraman",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
