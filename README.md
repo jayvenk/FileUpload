@@ -47,3 +47,12 @@ npm install
 ```
 npm start
 ```
+
+## Pull the changes from main before making any changes
+1. `git pull`
+
+## Commit changes to git
+1. Check the files modified -  `git status`
+2. Stage all the changes - `git add .`
+3. Commit the changes with a commit message - `git commit -m "commit-msg" `
+4. Push the changes - `git push`
