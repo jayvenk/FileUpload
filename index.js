@@ -2,26 +2,26 @@ document.addEventListener("DOMContentLoaded", init, false);
 function init() {
     console.log("inside init")
     document.querySelector('#files').addEventListener('change', handleFileSelect, false);
-    const uploadField = document.getElementById("files");
+    const uploadField = document.getElementById("fileCount");
     let filesList = [];
     document.querySelector('#fileCount').innerText = filesList.length + " files selected";
-    uploadField.onchange = function () {
-        const files = this.files;
-        if (files.length > 6) {
-          alert("Too many files uploaded. File limit is 60.");
-          resetForm();
-          return;
-        }
-        for (let i=0; i < files.length; i++) {
-          if (this.files[i].size > 4000000) {  // file size should not exceed 4MB
-              alert(files[i].name + " is too big!");
-              resetForm();
-              return;
-          }
-        }
-    };
     document.querySelector('#reset').addEventListener('click', resetForm, false);
 }
+function validateFileSelection() {
+    console.log(filesList.length);
+    if (filesList.length > 60) {
+      alert("Too many files uploaded. File limit is 60.");
+      resetForm();
+      return;
+    }
+    for (let i=0; i < filesList.length; i++) {
+      if (filesList[i].size > 4000000) {  // file size should not exceed 4MB
+          alert(filesList[i].name + " is too big!");
+          resetForm();
+          return;
+      }
+    }
+};
 function resetForm() {
     document.querySelector("#myForm").reset();
     filesList = [];
@@ -52,4 +52,5 @@ function handleFileSelect(e) {
     }
     document.querySelector('#fileCount').innerText = filesList.length + " files selected";
     document.querySelector("#myForm").reset();
+    validateFileSelection();
 }
